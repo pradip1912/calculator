@@ -1,0 +1,15 @@
+module CalApp
+{
+  interface calculator
+  {
+    
+    exception DivisionByZero {};
+
+    double addition(in double x,in double y);
+    double subtraction(in double x,in double y);
+    double multiplication(in double x,in double y);
+    double division(in double x,in double y) raises (DivisionByZero);
+
+    oneway void shutdown();
+  };
+};
